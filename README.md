@@ -62,9 +62,6 @@ The simulation aims to optimize response times, passenger travel efficiency, and
   - Represents user requests with type (INSIDE/OUTSIDE), floor, and direction.
   - Nested Enums: RequestType (INSIDE, OUTSIDE), RequestDirection (UP, DOWN).
 
-- ElevatorDirection.java:
-  - Enum defining elevator states: UP, DOWN, IDLE.
-
 - ElevatorController.java:
   - Orchestrates the system with a list of elevators and a queue of outside requests.
   - Key Methods: addOutsideRequest(), addInsideRequest(), findBestElevator(), run().
