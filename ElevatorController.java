@@ -4,9 +4,9 @@ public class ElevatorController {
     private List<Elevator> elevators;
     private Queue<Request> outsideRequests;
     private int totalFloors;
-    public ElevatorController (int numElevators) {
+    public ElevatorController (int numElevators, int totalFloors) {
         elevators = new ArrayList<>();
-        totalFloors =10;
+        this.totalFloors =totalFloors;
         for (int i = 0; i < numElevators; i++) {
             elevators.add(new Elevator(i));
         }
@@ -97,7 +97,7 @@ public class ElevatorController {
         return destination;
     }
     public static void main(String[] args) {
-        ElevatorController controller = new ElevatorController(2); // 2 elevators, 10 floors
+        ElevatorController controller = new ElevatorController(2,10); // 2 elevators, 10 floors
         controller.addOutsideRequest(3, Request.RequestDirection.UP); // Initial request
         controller.run();
     }
