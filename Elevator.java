@@ -71,7 +71,7 @@ public class Elevator {
             if (currentFloor == target) {
                 stops.remove(target);
                 isAtStop = true;
-                System.out.println("Elevator " + id + " reached floor " + currentFloor );
+                System.out.println("\u001b[32m"+"Elevator " + id + " reached floor " + currentFloor + "\u001b[0m");
             }
         }
     }

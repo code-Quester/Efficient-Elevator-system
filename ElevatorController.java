@@ -66,7 +66,7 @@ public class ElevatorController {
                 int randomFloor = (int) (Math.random() * totalFloors) + 1;
                 Request.RequestDirection randomDir = Math.random() < 0.5 ? Request.RequestDirection.UP : Request.RequestDirection.DOWN;
                 addOutsideRequest(randomFloor, randomDir);
-                System.out.println("New outside request: Floor " + randomFloor + " " + randomDir);
+                System.out.println("\u001b[31m" + "New outside request: Floor " + randomFloor + " " + randomDir + "\u001b[0m");
             }
     
             assignRequests();
